@@ -1,9 +1,7 @@
 <template>
-
-  <!-- NAVBAR -->
   <v-app>
-    
-    <v-app-bar app color="teal lighten-1" dark>
+     <!-- NAVBAR -->
+     <v-app-bar app color="teal lighten-1" dark>
       <div class="d-flex align-center">
         <v-img
           alt="Vuetify Logo"
@@ -21,7 +19,6 @@
     <v-main>
       <router-view/>
     </v-main>
-
   </v-app>
 </template>
 

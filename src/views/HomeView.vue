@@ -3,27 +3,32 @@
 <template>
   <v-container mx-auto my-60>
 
-    <h1>Cursos</h1>
-
-    <v-divider></v-divider>
+    <v-row class="d-flex justify-center my-5">
+      <h1>Cursos</h1>
+    </v-row>
     
     <!-- CARDS -->
-    <v-row d-flex flex-wrap justify-center align-center>
+    <v-row class="d-flex flex-wrap justify-center align-center">
 
-      <v-col cols-12 md-3 v-for="course in courses" :key="course.id">
-        <v-card class="ma-10" max-width="344">
+      <v-col cols="9" md="3" v-for="course in courses" :key="course.id">
+        <v-card max-width="344" class="ma-2">
+          
+          <!-- Card Image -->
           <v-img :src="course.img" height="200px"></v-img>
 
+          <!-- Title -->
           <v-card-title>
             {{ course.name }}
           </v-card-title>
 
+          <!-- Details -->
           <v-card-subtitle>
                   Costo: ${{ course.cost.toLocaleString('es-CL') }}
             <br>  Cupos: {{ course.quota }}
             <br>  Inicio: {{ course.date }}
           </v-card-subtitle>
 
+          <!-- Description -->
           <v-card-text>
             {{ course.description }}
           </v-card-text>
@@ -64,5 +69,5 @@ export default {
 </script>
 
 <style scoped>
-  
+
 </style>

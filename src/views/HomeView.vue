@@ -8,10 +8,10 @@
     </v-row>
     
     <!-- CARDS -->
-    <v-row class="d-flex flex-wrap justify-center align-center">
+    <v-row justify="center">
 
-      <v-col cols="9" md="3" v-for="course in courses" :key="course.id">
-        <v-card max-width="344" class="ma-2">
+      <v-col cols="12" md="3" v-for="course in courses" :key="course.id">
+        <v-card class="mx-auto" max-width="344">
           
           <!-- Card Image -->
           <v-img :src="course.img" height="200px"></v-img>

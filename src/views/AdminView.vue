@@ -3,7 +3,7 @@
 <template>
   <v-container class="body mx-auto my-50 cols-9 d-flex flex-column align-center">
 
-    <v-item class="my-8"><h1>Administración</h1></v-item>
+    <div class="my-8"><h1>Administración</h1></div>
 
     <!-- LIST OF COURSES -->
      <v-container class="my-8 table">
@@ -44,18 +44,11 @@
 
      <!-- BUTTON ADD COURSE -->
 
-     <v-row justify="center">
-        <v-col>
-          <v-btn
-            depressed
-            elevation="2"
-            large
-            raised>
-            Agregar curso
-          </v-btn>
-        </v-col>
-     </v-row>
-
+     <v-container>
+      <v-row>
+        <AddCoursePopup/>
+      </v-row>
+     </v-container>
 
             <!-- FORM MODAL -->
 
@@ -97,6 +90,7 @@
 <script>
 import { mapActions, mapGetters, mapState } from 'vuex';
 import ActionsButtons from '@/components/ActionsButtons.vue';
+import AddCoursePopup from '@/components/AddCoursePopup.vue';
 
 export default {
   name: 'admin-view',
@@ -120,7 +114,8 @@ export default {
   },
   // watch: {},
   components: {
-    ActionsButtons
+    ActionsButtons,
+    AddCoursePopup
   },
   // mixins: [],
   // filters: {},
@@ -133,7 +128,6 @@ export default {
 </script>
 
 <style scoped>
-
   .body{
     margin: 4% auto;
   }
